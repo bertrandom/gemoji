@@ -33,6 +33,12 @@ namespace :images do
   task :extract do
     require 'emoji/extractor'
     gem_dir = File.dirname(File.realpath(__FILE__))
-    Emoji::Extractor.new(64, "#{gem_dir}/images/emoji/unicode").extract!
+    Emoji::Extractor.new(20, "#{gem_dir}/images/emoji/unicode/20x20").extract!
+    Emoji::Extractor.new(32, "#{gem_dir}/images/emoji/unicode/32x32").extract!
+    Emoji::Extractor.new(40, "#{gem_dir}/images/emoji/unicode/40x40").extract!
+    Emoji::Extractor.new(48, "#{gem_dir}/images/emoji/unicode/48x48").extract!
+    Emoji::Extractor.new(64, "#{gem_dir}/images/emoji/unicode/64x64").extract!
+    Emoji::Extractor.new(96, "#{gem_dir}/images/emoji/unicode/96x96").extract!
+    Emoji::Extractor.new(160, "#{gem_dir}/images/emoji/unicode/160x160").extract!
   end
 end
